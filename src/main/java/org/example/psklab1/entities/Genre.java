@@ -1,0 +1,22 @@
+package org.example.psklab1.entities;
+
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+@Entity
+@Getter
+@Setter
+public class Genre {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Basic(optional = false)
+    private String name;
+
+    @ManyToMany(mappedBy = "genres")
+    private List<Game> games;
+}
