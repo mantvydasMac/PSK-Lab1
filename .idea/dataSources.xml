@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="lab1DB" uuid="1ed8ea46-91ef-4cdf-bd06-b5d4a59a99e5">
-      <driver-ref>h2.unified</driver-ref>
+    <data-source source="LOCAL" name="lab1@ep-lively-mud-a28jar2m-pooler.eu-central-1.aws.neon.tech" uuid="8eabc043-9256-4c1e-a72a-3595d6e7e261">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.h2.Driver</jdbc-driver>
-      <jdbc-url>jdbc:h2:file:./database/lab1DB</jdbc-url>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ep-lively-mud-a28jar2m-pooler.eu-central-1.aws.neon.tech:5432/lab1</jdbc-url>
       <jdbc-additional-properties>
         <property name="com.intellij.clouds.kubernetes.db.host.port" />
         <property name="com.intellij.clouds.kubernetes.db.enabled" value="false" />
