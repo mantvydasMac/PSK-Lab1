@@ -1,12 +1,14 @@
 package org.example.psklab1.entities;
 
 import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.inject.Alternative;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 
 import java.util.List;
 
+@Alternative
 @RequestScoped
 public class StudentDAOJpa implements StudentDAO {
 
@@ -18,9 +20,6 @@ public class StudentDAOJpa implements StudentDAO {
         return em.createQuery("SELECT s FROM Student s LEFT JOIN FETCH s.courses", Student.class).getResultList();
     }
 
-//    get by id
-
-//    create
     @Override
     @Transactional
     public Student create(Student student) {

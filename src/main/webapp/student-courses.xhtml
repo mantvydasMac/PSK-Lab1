@@ -20,7 +20,6 @@
          
          <ui:repeat value="#{student.courses}" var="course">
             <p>#{course.title}</p>
-            <p>#{course.teacher.name}</p>
          </ui:repeat>
 
          <h:link value="View" outcome="student">
