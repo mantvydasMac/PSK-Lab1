@@ -11,8 +11,7 @@ public interface StudentMapper {
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
             @Result(property = "groupNumber", column = "groupnumber"),
-            @Result(property = "courses", column = "id",
-                    many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
+            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
     })
     List<Student> getAll();
 
@@ -21,8 +20,7 @@ public interface StudentMapper {
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
             @Result(property = "groupNumber", column = "groupnumber"),
-            @Result(property = "courses", column = "id",
-                    many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
+            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
     })
     Student getById(Long id);
 
