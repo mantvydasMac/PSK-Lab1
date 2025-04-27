@@ -48,5 +48,33 @@
       </h:form>
    </div>
 
+
+   <h2>List of Courses</h2>
+   <div>
+      <ui:repeat value="#{courseController.courses}" var="course">
+         <div style="border: black solid">
+            <h4>#{course.title}</h4>
+
+            <h:form>
+               <h:inputHidden value="#{courseController.courseId}">
+                  <f:passThroughAttribute name="value" value="#{course.id}" />
+               </h:inputHidden>
+               <h:commandButton value="Delete" action="#{courseController.deleteCourse()}" />
+            </h:form>
+
+         </div>
+      </ui:repeat>
+   </div>
+
+   <div>
+      <h2>Add new course</h2>
+      <h:form>
+         <label for="title">Course title</label> <br />
+         <h:inputText id="title" value="#{courseController.courseTitle}"/>
+
+         <h:commandButton value="Create" action="#{courseController.addCourse()}"/>
+      </h:form>
+   </div>
+
 </h:body>
 </html>

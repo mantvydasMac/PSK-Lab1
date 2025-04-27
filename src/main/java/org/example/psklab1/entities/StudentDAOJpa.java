@@ -8,7 +8,6 @@ import jakarta.transaction.Transactional;
 
 import java.util.List;
 
-
 @RequestScoped
 public class StudentDAOJpa implements StudentDAO {
 

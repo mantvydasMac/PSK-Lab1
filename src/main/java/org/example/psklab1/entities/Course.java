@@ -19,7 +19,7 @@ public class Course {
     @ManyToOne
     private Teacher teacher;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     @JoinTable(
             name = "course_student",
             joinColumns = @JoinColumn(name = "course_id"),

@@ -3,6 +3,7 @@ package org.example.psklab1.entities;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 import java.util.List;
 
@@ -18,8 +19,10 @@ public class CourseDAOJpa implements CourseDAO {
     }
 
     @Override
+    @Transactional
     public Course create(Course course) {
-        return null;
+        em.persist(course);
+        return course;
     }
 
     @Override
@@ -28,7 +31,12 @@ public class CourseDAOJpa implements CourseDAO {
     }
 
     @Override
+    @Transactional
     public Course deleteById(Long id) {
-        return null;
+        Course course = em.find(Course.class, id);
+        if (course != null) {
+            em.remove(course);
+        }
+        return course;
     }
 }
