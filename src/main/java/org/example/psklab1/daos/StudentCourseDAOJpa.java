@@ -1,4 +1,4 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;

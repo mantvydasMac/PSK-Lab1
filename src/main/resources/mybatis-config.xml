@@ -18,8 +18,8 @@
     </environments>
 
     <mappers>
-        <mapper class="org.example.psklab1.entities.StudentMapper" />
-        <mapper class="org.example.psklab1.entities.CourseMapper" />
+        <mapper class="org.example.psklab1.daos.StudentMapper" />
+        <mapper class="org.example.psklab1.daos.CourseMapper" />
     </mappers>
 
 </configuration>

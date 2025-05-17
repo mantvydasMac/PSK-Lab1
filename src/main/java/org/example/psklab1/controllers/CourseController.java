@@ -1,14 +1,12 @@
 package org.example.psklab1.controllers;
 
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.faces.application.FacesMessage;
-import jakarta.faces.context.FacesContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.psklab1.entities.Course;
-import org.example.psklab1.entities.CourseDAO;
+import org.example.psklab1.daos.CourseDAO;
 
 import java.util.List;
 

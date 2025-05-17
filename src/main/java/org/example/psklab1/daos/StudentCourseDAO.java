@@ -1,4 +1,4 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import java.util.List;
 

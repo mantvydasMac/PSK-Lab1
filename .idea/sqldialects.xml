@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/entities/CourseMapper.java" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/entities/StudentCourseDAOJpa.java" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/entities/StudentMapper.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/daos/CourseMapper.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/daos/StudentCourseDAOJpa.java" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/org/example/psklab1/daos/StudentMapper.java" dialect="PostgreSQL" />
   </component>
 </project>

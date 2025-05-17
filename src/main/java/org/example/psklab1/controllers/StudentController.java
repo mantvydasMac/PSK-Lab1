@@ -8,7 +8,7 @@ import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
 import org.example.psklab1.entities.Student;
-import org.example.psklab1.entities.StudentDAO;
+import org.example.psklab1.daos.StudentDAO;
 
 import java.util.List;
 

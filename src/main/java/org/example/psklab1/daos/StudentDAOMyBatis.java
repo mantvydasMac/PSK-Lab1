@@ -1,10 +1,11 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.enterprise.inject.Alternative;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import org.apache.ibatis.session.SqlSession;
+import org.example.psklab1.entities.Student;
 
 import java.util.List;
 

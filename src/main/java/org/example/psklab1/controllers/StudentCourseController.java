@@ -1,6 +1,5 @@
 package org.example.psklab1.controllers;
 
-import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
@@ -8,8 +7,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
-import org.example.psklab1.entities.Student;
-import org.example.psklab1.entities.StudentCourseDAO;
+import org.example.psklab1.daos.StudentCourseDAO;
 
 import java.util.ArrayList;
 import java.util.List;

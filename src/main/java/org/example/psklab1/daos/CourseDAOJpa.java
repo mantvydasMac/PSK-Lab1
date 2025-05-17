@@ -1,9 +1,10 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import org.example.psklab1.entities.Course;
 
 import java.util.List;
 

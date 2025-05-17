@@ -1,6 +1,7 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import org.apache.ibatis.annotations.Select;
+import org.example.psklab1.entities.Course;
 
 import java.util.List;
 

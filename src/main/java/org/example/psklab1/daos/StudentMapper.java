@@ -1,6 +1,7 @@
-package org.example.psklab1.entities;
+package org.example.psklab1.daos;
 
 import org.apache.ibatis.annotations.*;
+import org.example.psklab1.entities.Student;
 
 import java.util.List;
 
@@ -11,7 +12,7 @@ public interface StudentMapper {
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
             @Result(property = "groupNumber", column = "groupnumber"),
-            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
+            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.daos.CourseMapper.getCoursesByStudentId"))
     })
     List<Student> getAll();
 
@@ -20,7 +21,7 @@ public interface StudentMapper {
             @Result(property = "id", column = "id"),
             @Result(property = "name", column = "name"),
             @Result(property = "groupNumber", column = "groupnumber"),
-            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.entities.CourseMapper.getCoursesByStudentId"))
+            @Result(property = "courses", column = "id", many = @Many(select = "org.example.psklab1.daos.CourseMapper.getCoursesByStudentId"))
     })
     Student getById(Long id);
 

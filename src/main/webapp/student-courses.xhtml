@@ -13,15 +13,45 @@
 
    <h2>List of Students</h2>
 
-   <ui:repeat value="#{studentController.students}" var="student">
-      <div style="border: black solid">
-         <h4>#{student.name}</h4>
-         <p>#{student.groupNumber}</p>
-         
+<!--   <ui:repeat value="#{studentController.students}" var="student">-->
+<!--      <div style="border: black solid">-->
+<!--         <h4>#{student.name}</h4>-->
+<!--         <p>#{student.groupNumber}</p>-->
+<!--         -->
+<!--         <ui:repeat value="#{student.courses}" var="course">-->
+<!--            <p>#{course.title}</p>-->
+<!--         </ui:repeat>-->
+
+<!--         <h:link value="View" outcome="student">-->
+<!--            <f:param name="id" value="#{student.id}" />-->
+<!--         </h:link>-->
+
+<!--         <h:form>-->
+<!--            <h:commandButton value="Delete" action="#{studentController.deleteStudent()}">-->
+<!--               <f:param name="id" value="#{student.id}" />-->
+<!--            </h:commandButton>-->
+<!--         </h:form>-->
+
+<!--      </div>-->
+<!--   </ui:repeat>-->
+
+   <h:dataTable value="#{studentController.students}" var="student" border="1">
+      <h:column>
+         <f:facet name="header">Name</f:facet>
+         #{student.name}
+      </h:column>
+      <h:column>
+         <f:facet name="header">Group number</f:facet>
+         #{student.groupNumber}
+      </h:column>
+      <h:column>
+         <f:facet name="header">Courses</f:facet>
          <ui:repeat value="#{student.courses}" var="course">
             <p>#{course.title}</p>
          </ui:repeat>
-
+      </h:column>
+      <h:column>
+         <f:facet name="header">Actions</f:facet>
          <h:link value="View" outcome="student">
             <f:param name="id" value="#{student.id}" />
          </h:link>
@@ -31,9 +61,9 @@
                <f:param name="id" value="#{student.id}" />
             </h:commandButton>
          </h:form>
+      </h:column>
+   </h:dataTable>
 
-      </div>
-   </ui:repeat>
    <h:messages globalOnly="true" />
    <div>
       <h2>Add new student</h2>
