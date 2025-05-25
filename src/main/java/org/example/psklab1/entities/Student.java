@@ -18,6 +18,10 @@ public class Student {
 
     private String groupNumber;
 
+    @Version
+    @Column(nullable = false)
+    private Long version;
+
     @ManyToMany(mappedBy = "students")
     private List<Course> courses;
 }

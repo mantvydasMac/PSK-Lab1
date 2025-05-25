@@ -44,8 +44,12 @@ public class StudentDAOJpa implements StudentDAO {
     }
 
 //    update
+    @Override
+    @Transactional
+    public Student update(Student student) {
+        return em.merge(student);
+    }
 
 //    delete
-
 
 }

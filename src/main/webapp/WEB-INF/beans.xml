@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="https://jakarta.ee/xml/ns/jakartaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/beans_4_1.xsd">
+    <alternatives>
+<!--        <class>org.example.psklab1.daos.StudentDAOMyBatis</class>-->
+    </alternatives>
+    <decorators>
+        <class>org.example.psklab1.util.StudentDAODecorator</class>
+    </decorators>
+    <interceptors>
+        <class>org.example.psklab1.util.Interceptor</class>
+    </interceptors>
+</beans>

@@ -39,5 +39,18 @@
             </h:commandButton>
         </h:form>
     </div>
+
+    <div>
+        <h2>Edit student data</h2>
+        <h:form>
+            <h:inputHidden value="#{studentController.editStudent.id}" />
+            <h:inputHidden value="#{studentController.editStudent.version}" />
+
+            <h:outputLabel for="name" value="Student Name" />
+            <h:inputText id="name" value="#{studentController.editStudent.name}" />
+
+            <h:commandButton value="Update" action="#{studentController.updateStudent}" />
+        </h:form>
+    </div>
 </h:body>
 </html>

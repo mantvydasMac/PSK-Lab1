@@ -39,4 +39,9 @@ public class StudentDAOMyBatis implements StudentDAO {
         sqlSession.getMapper(StudentMapper.class).delete(id);
         return null;
     }
+
+    @Override
+    public Student update(Student student) {
+        return null;
+    }
 }

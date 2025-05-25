@@ -5,6 +5,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Named;
 import lombok.Getter;
 import lombok.Setter;
+import org.example.psklab1.daos.CourseReportService;
 import org.example.psklab1.entities.Course;
 import org.example.psklab1.daos.CourseDAO;
 
@@ -16,6 +17,9 @@ public class CourseController {
 
     @Inject
     private CourseDAO courseDAO;
+
+    @Inject
+    private CourseReportService courseReportService;
 
     @Getter
     @Setter
@@ -37,5 +41,9 @@ public class CourseController {
 
     public void deleteCourse() {
         courseDAO.deleteById(courseId);
+    }
+
+    public void getCourseReport() {
+        courseReportService.generateEnrollmentReport();
     }
 }

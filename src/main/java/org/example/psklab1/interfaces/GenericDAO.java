@@ -11,4 +11,6 @@ public interface GenericDAO<T> {
     T findById(Long id);
 
     T deleteById(Long id);
+
+    T update(T t);
 }

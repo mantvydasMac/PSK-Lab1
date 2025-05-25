@@ -41,4 +41,15 @@ public class TeacherDAOJpa implements TeacherDAO {
         }
         return teacher;
     }
+
+    @Override
+    @Transactional
+    public Teacher update(Teacher teacher) {
+        return em.merge(teacher);
+    }
+
+    @Override
+    public void printMessage() {
+        System.out.println("Using JPA for teacherDAO.");
+    }
 }

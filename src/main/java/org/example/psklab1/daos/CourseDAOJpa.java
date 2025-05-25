@@ -40,4 +40,9 @@ public class CourseDAOJpa implements CourseDAO {
         }
         return course;
     }
+
+    @Override
+    public Course update(Course course) {
+        return null;
+    }
 }

@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
    <title>Teachers</title>
-   <h:outputScript library="js" name="teacher.js" />
+   <h:outputScript library="js" name="teacher.js"/>
 </h:head>
 
 <h:body>
+   <h2>Teachers</h2>
    <div id="teacherList">
       <!-- Filled dynamically -->
    </div>
+
+   <h2>Create Teacher</h2>
+   <form id="createTeacherForm">
+      <input type="text" id="newTeacherName" placeholder="Name"/>
+      <button type="submit">Create</button>
+   </form>
+
+   <h2>Update Teacher</h2>
+   <form id="updateTeacherForm">
+      <input type="number" id="updateTeacherId" placeholder="Teacher ID"/>
+      <input type="text" id="updateTeacherName" placeholder="New Name"/>
+      <button type="submit">Update</button>
+   </form>
 </h:body>
 </html>

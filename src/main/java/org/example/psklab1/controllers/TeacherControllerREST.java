@@ -25,6 +25,7 @@ public class TeacherControllerREST {
 
     @GET
     public List<TeacherDTO> getTeachers() {
+        teacherDAO.printMessage();
         return teacherDAO.getAll()
                 .stream()
                 .map(TeacherDTO::new)
@@ -35,6 +36,11 @@ public class TeacherControllerREST {
     @Path("/{id}")
     public TeacherDTO getTeacherById(@PathParam("id") Long id) {
         return new TeacherDTO(teacherDAO.findById(id));
+    }
+
+    @PUT
+    public TeacherDTO updateTeacher(Teacher teacher) {
+        return new TeacherDTO(teacherDAO.update(teacher));
     }
 
     @DELETE
